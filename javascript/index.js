@@ -1,6 +1,6 @@
 
 // set the date we're counting down to
-var target_date = moment("2014-10-15T09:00:00").toDate().getTime();
+var target_date = moment("2014-10-15T21:00:00").toDate().getTime();
 
 // variables for time units
 var days, hours, minutes, seconds; 
