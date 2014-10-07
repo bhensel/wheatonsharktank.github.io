@@ -57,7 +57,7 @@ h1, h2 {
 
 header {
     background-color: rgba(53, 59, 73, 0.8);
-    min-height: 600px;
+    min-height: 550px;
 }
 
 header .logo {
