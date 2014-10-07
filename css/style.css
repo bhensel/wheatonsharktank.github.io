@@ -195,6 +195,7 @@ header .logo {
     .register-content .header {
         width: 100%;
     }
+    p { font-size: 19px }
     .gallery {
         padding: 10px 30px;
     }
