@@ -167,7 +167,7 @@ header .logo {
     display: block;
     position: absolute;
     top: 50%;
-    margin-top: -50px;
+    margin-top: -80px;
     color: #FEFEFE;
 }
 .countdown .subtitle {
@@ -205,7 +205,7 @@ header .logo {
         background-size: auto 300px;
     }
     header {
-        min-height: 250px;
+        min-height: 275px;
     }
     header .logo {
         background: url('../images/logo.svg?1');
@@ -226,6 +226,10 @@ header .logo {
     }
     .countdown .subtitle {
         font-size: 20px;
+    }
+    .countdown #countdown {
+        padding-top: 20px;
+        display: block;
     }
     .gallery a {
         width: 28%;
