@@ -3,13 +3,65 @@
 }
 
 body {
-    background: #FEFEFE;
+    background: #FEFEFE url('../images/crowd1.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     font-weight: 200;
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
-    background: url('../images/logo.svg?');
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+
+.t1     { width:1% }
+.t2     { width:2% }
+.t10    { width:10% }
+.t20    { width:20% }
+.t25    { width:25% }       /* 1/4 */
+.t30    { width:30% }
+.t32    { width:32% }
+.t33    { width:33.33333% }   /* 1/3 */
+.t40    { width:40% }
+.t50    { width:50% }       /* 1/2 */
+.t60    { width:60% }
+.t64    { width:64% }
+.t66    { width:66.66666% }   /* 2/3 */
+.t70    { width:70% }
+.t75    { width:75% }       /* 3/4*/
+.t80    { width:80% }
+.t90    { width:90% }
+.t100   { width:100% }
+
+h1, h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #FFF;
+    font-size: 36px;
+    text-align: center;
+}
+
+
+
+.button {
+    border: 2px solid #FFF;
+    padding: 10px 15px;
+    display: inline-block;
+    color: #FFF;
+    text-transform: uppercase;
+    margin: 5px 0px;
+}
+
+header {
+    background-color: rgba(53, 59, 73, 0.8);
+    min-height: 600px;
+}
+
+header .logo {
+    background: url('../images/logo.svg?1');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% auto;
@@ -19,6 +71,93 @@ body {
     left: 50%;
     margin-left: -400px;
 }
+
+.content {
+    background: #FFF;
+    overflow: auto;
+}
+
+.about {
+    float: left;
+    padding: 20px 35px;
+}
+.about h1 {
+    color: #000;
+    padding: 0px;
+    text-align: left;
+    margin: 10px 0px;
+}
+.about p {
+    line-height: 28px;
+}
+
+.gallery {
+    float: left;
+    padding: 20px 0px;
+}
+.gallery h1 {
+    color: #000;
+    padding: 0px;
+    text-align: left;
+    margin: 10px 0px;
+}
+.gallery a {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    float: left;
+    margin: 5px;
+}
+.gallery a img {
+    min-height: 100%;
+    max-height: 150%;
+    min-width: 100%;
+}
+
+
+
+.register {
+    overflow: auto;
+    position: relative;
+}
+.register-image {
+    float: left;
+    overflow: hidden;
+    height: 100%;
+}
+.register-image img {
+    width: 100%;
+}
+.register-content {
+    float: left;
+    background: #000;
+    height: 100%;
+}
+.register-content .header {
+    background: #EE6539;
+    min-height: 200px;
+    float: left;
+    text-align: center;
+    padding: 40px 15px;
+}
+.register-content .header h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #FFF;
+    font-size: 36px;
+    text-align: center;
+    padding: 0px 50px 10px;
+    margin: 0px;
+}
+.register-content .header .date {
+    display: block;
+    color: #FEFEFE;
+    padding: 20px 20px 30px 20px;
+}
+
+
 .countdown {
     font-size: 50px;
     width: 100%;
@@ -27,15 +166,46 @@ body {
     position: absolute;
     top: 50%;
     margin-top: -50px;
+    color: #FEFEFE;
 }
 .countdown .subtitle {
     display: block;
     font-size: 25px;
 }
-
+@media only screen and (max-width: 1024px) {
+    body {
+        background-size: auto 500px;
+    }
+    header {
+        min-height: 500px;
+    }
+    .about {
+        width: 60%;
+    } 
+    .gallery {
+        width: 40%;
+    }
+}
 @media only screen and (max-width: 640px) {
-    .logo {
-        background: url('../images/logo.svg?');
+    .about, 
+    .register, 
+    .gallery, 
+    .register-content, 
+    .register-image, 
+    .register-content .header {
+        width: 100%;
+    }
+    .gallery {
+        padding: 10px 30px;
+    }
+    body {
+        background-size: auto 300px;
+    }
+    header {
+        min-height: 250px;
+    }
+    header .logo {
+        background: url('../images/logo.svg?1');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 100% auto;
@@ -45,11 +215,18 @@ body {
         left: 50%;
         margin-left: -160px;
     }
+
     .countdown {
         font-size: 30px;
         padding: 15px;
+        top: 160px;
     }
     .countdown .subtitle {
         font-size: 20px;
+    }
+    .gallery a {
+        width: 28%;
+        padding: 1%;
+        height: 75px;
     }
 }

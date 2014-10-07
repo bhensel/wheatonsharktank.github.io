@@ -8,15 +8,15 @@
     </defs>
     <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="Artboard-7" sketch:type="MSArtboardGroup">
-            <text id="WHEATON-SHARK-TANK" fill="#000000" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="110" font-weight="normal">
+            <text id="WHEATON-SHARK-TANK" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="110" font-weight="normal">
                 <tspan x="287" y="314">WHEATON SHARK TANK</tspan>
             </text>
             <g id="Path-2-+-Rectangle-5" sketch:type="MSLayerGroup" transform="translate(89.000000, 194.000000)">
                 <mask id="mask-2" sketch:name="Rectangle 5" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <use id="Rectangle-5" stroke="#000000" stroke-width="5" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
-                <path d="M-57.12,113.585727 C-57.12,113.585727 34.7445449,118.477165 47.9501723,104.582607 C61.1557997,90.6880481 43.7835151,53.8643928 43.7835151,53.8643928 C43.7835151,53.8643928 67.7986372,50.67677 86.6848828,66.7034503 C112.693244,88.7738868 113.019933,97.782225 132.596213,112.092759 C142.235719,119.139373 170.385833,107.40346 208.155208,109.610755 C245.924583,111.818051 827.68,109.610755 827.68,109.610755" id="Path-2" stroke="#000000" stroke-width="5" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                <use id="Rectangle-5" stroke="#FFFFFF" stroke-width="5" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <path d="M-57.12,113.585727 C-57.12,113.585727 34.7445449,118.477165 47.9501723,104.582607 C61.1557997,90.6880481 43.7835151,53.8643928 43.7835151,53.8643928 C43.7835151,53.8643928 67.7986372,50.67677 86.6848828,66.7034503 C112.693244,88.7738868 113.019933,97.782225 132.596213,112.092759 C142.235719,119.139373 170.385833,107.40346 208.155208,109.610755 C245.924583,111.818051 827.68,109.610755 827.68,109.610755" id="Path-2" stroke="#FFFFFF" stroke-width="5" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
             </g>
         </g>
     </g>
