@@ -6,8 +6,6 @@ body {
     background: #FEFEFE url('../images/crowd1.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     font-weight: 200;
     margin: 0;
@@ -39,7 +37,6 @@ body {
 .t100   { width:100% }
 
 h1, h2 {
-    text-transform: uppercase;
     font-weight: 400;
     color: #FFF;
     font-size: 36px;
@@ -60,6 +57,7 @@ h1, h2 {
 header {
     background-color: rgba(53, 59, 73, 0.8);
     min-height: 550px;
+    position: relative;
 }
 
 header .logo {
@@ -124,6 +122,10 @@ header .logo {
     overflow: auto;
     position: relative;
 }
+.register-strip {
+    height: 250px;
+    overflow: hidden;
+}
 .register-image {
     float: left;
     overflow: hidden;
@@ -134,8 +136,8 @@ header .logo {
 }
 .register-content {
     float: left;
-    background: #000;
     height: 100%;
+    background: #F6F6F6;
 }
 .register-content .header {
     background: #EE6539;
@@ -159,6 +161,56 @@ header .logo {
     padding: 20px 20px 30px 20px;
 }
 
+.register-content h2,
+.register-content h1 {
+    color: #000;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.register-content form {
+    left: 25%;
+    display: block;
+    position: relative;
+}
+.register-content label {
+    display: block;
+}
+.register-content label span {
+    display: block;
+    padding: 5px 0px;
+}
+.register-content form input,
+.register-content form textarea {
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid #dddddd;
+    margin-bottom: 21px;
+    padding: 14px;
+    outline: none;
+}
+
+.register-content form input:focus,
+.register-content form textarea:focus {
+    border: 1px solid #AAA;
+}
+
+.register-content form textarea {
+    min-height: 100px;
+}
+
+.register-content form .checkboxes div {
+    display: inline-block;
+}
+
+.register-content form input[type=submit] {
+    background: #FFF;
+}
+
+.register-content form textarea.red {
+    border-color: #FF0000;
+}
+
 
 .countdown {
     font-size: 50px;
@@ -167,7 +219,7 @@ header .logo {
     display: block;
     position: absolute;
     top: 50%;
-    margin-top: -80px;
+    margin-top: 0px;
     color: #FEFEFE;
 }
 .countdown .subtitle {
@@ -186,6 +238,15 @@ header .logo {
     } 
     .gallery {
         width: 40%;
+    }
+    
+    .register-strip {
+        height: 285px;
+    }
+    .register-strip img {
+        width: auto;
+        min-width: 100%;
+        height: 285px;
     }
 }
 @media only screen and (max-width: 640px) {
@@ -218,11 +279,24 @@ header .logo {
         left: 50%;
         margin-left: -160px;
     }
+    
+    .register-strip {
+        height: auto;
+    }
+    
+    .register-content form {
+        left: 10%;
+        width: 80%;
+    }
+    
+    .register-content form .checkboxes div {
+        display: block;
+    }
 
     .countdown {
         font-size: 30px;
         padding: 15px;
-        top: 160px;
+        top: 80px;
     }
     .countdown .subtitle {
         font-size: 20px;
