@@ -6,10 +6,9 @@ var target_date = moment("2014-11-13T21:00:00").toDate().getTime();
 var days, hours, minutes, seconds; 
 
 // get tag element
-var countdown = document.getElementById("countdown");
+var countdownElement = document.getElementById("countdown");
 
-// update the tag with id "countdown" every 1 second
-setInterval(function() {
+var countdown = function() {
 
     // find the amount of "seconds" between now and target
     var current_date = new Date().getTime();
@@ -26,10 +25,15 @@ setInterval(function() {
     seconds = parseInt(seconds_left % 60);
     
     // format countdown string + set tag value
-    countdown.innerHTML = days + " days, " + hours + " hours, " 
+    countdownElement.innerHTML = days + " days, " + hours + " hours, " 
 	+ minutes + " minutes, " + seconds + " seconds";   
 
-}, 1000);
+}
+
+// update the tag with id "countdown" every 1 second
+setInterval(countdown, 1000);
+
+countdown();
 
 
 $(document).ready(function() {
