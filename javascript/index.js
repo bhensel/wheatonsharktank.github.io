@@ -44,6 +44,8 @@ $(document).ready(function() {
         values.push($("textarea[name='shark_tank_idea']"));
         values.push($("textarea[name='describe_customer']"));
         values.push($("textarea[name='team_skills']"));
+        values.push($("textarea[name='point_person']"));
+        values.push($("textarea[name='point_person_email']"));
         values.push($("textarea[name='kingdom_god']"));
         values.push($("textarea[name='won_what_now']"));
         values.push($("textarea[name='idea_excel']"));
