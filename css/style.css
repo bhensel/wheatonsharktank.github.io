@@ -20,6 +20,7 @@ body {
 .t1     { width:1% }
 .t2     { width:2% }
 .t10    { width:10% }
+.t12    { width:14% }
 .t20    { width:20% }
 .t25    { width:25% }       /* 1/4 */
 .t30    { width:30% }
@@ -75,11 +76,13 @@ header .logo {
 .content {
     background: #FFF;
     overflow: auto;
+    text-align: center;
 }
 
-.about {
-    float: left;
+.about, .gallery, .schedule, .team {
     padding: 20px 35px;
+    text-align: left;
+    display: inline-block;
 }
 .about h1 {
     color: #000;
@@ -92,10 +95,9 @@ header .logo {
 }
 
 .gallery {
-    float: left;
-    padding: 20px 0px;
+    margin-bottom: 40px;
 }
-.gallery h1 {
+.gallery h1, .schedule h1, .team h1 {
     color: #000;
     padding: 0px;
     text-align: left;
@@ -117,15 +119,76 @@ header .logo {
 }
 
 
+.schedule table {
+    border: 1px solid #DADDDF;
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+
+    overflow: hidden;
+    
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    
+    border-bottom-width: 0px;
+}
+.schedule .pod-title {
+    background: #eee;
+}
+.schedule tr {
+    padding: 0px;
+}
+.schedule td {
+    padding: 8px;
+    border-bottom: 1px solid #DADDDF;
+}
+.schedule td:nth-child(even) {
+    border-left: 1px solid #DADDDF;
+}
+
+
+.team {
+    font-size: 0px;
+    padding: 20px 5px;
+    margin: 20px 0px;
+    color: #111;
+    text-align: center;
+}
+.team h1 {
+    margin-left: 1%;
+}
+.team h2 {
+    color: #111;
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+.team-member {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    font-size: 15px;
+    position: relative;
+}
+.team-member span {
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+    color: #FFF;    
+}
+
 
 .register {
     overflow: auto;
     position: relative;
 }
 .register-strip {
-    height: 250px;
+    height: 200px;
     overflow: hidden;
 }
+.register-strip.bottom { height: 300px; }
 .register-image {
     float: left;
     overflow: hidden;
@@ -133,6 +196,7 @@ header .logo {
 }
 .register-image img {
     width: 100%;
+    margin-top: -20px;
 }
 .register-content {
     float: left;
@@ -152,7 +216,7 @@ header .logo {
     color: #FFF;
     font-size: 36px;
     text-align: center;
-    padding: 0px 50px 10px;
+    padding: 20px 50px 10px;
     margin: 0px;
 }
 .register-content .header .date {
@@ -220,13 +284,40 @@ header .logo {
     display: block;
     position: absolute;
     top: 50%;
-    margin-top: 0px;
+    margin-top: -20px;
     color: #FEFEFE;
 }
 .countdown .subtitle {
     display: block;
     font-size: 25px;
 }
+
+
+footer {
+    background: rgba(53, 59, 73, 0.8);
+    padding: 30px 0px 0px;
+    text-align: center;
+}
+
+footer .sablogo {
+    width: 160px;
+    margin-bottom: 30px;
+}
+footer .copy {
+    overflow: auto;
+    background: #424650;
+    font-size: 13px;
+    padding: 10px;
+    color: #FEFEFE;
+}
+footer .copy .copy-right {
+    float: right;
+}
+footer .copy .copy-left {
+    float: left;
+}
+
+
 @media only screen and (max-width: 1024px) {
     body {
         background-size: auto 500px;
@@ -240,6 +331,7 @@ header .logo {
     .gallery {
         width: 40%;
     }
+    .team-member { width: 33%; }
     
     .register-strip {
         height: 285px;
@@ -249,6 +341,9 @@ header .logo {
         min-width: 100%;
         height: 285px;
     }
+    .register-strip.bottom img {
+        height: auto;
+    }
 }
 @media only screen and (max-width: 640px) {
     .about, 
@@ -256,6 +351,7 @@ header .logo {
     .gallery, 
     .register-content, 
     .register-image, 
+    .schedule,
     .register-content .header {
         width: 100%;
     }
@@ -284,6 +380,9 @@ header .logo {
     .register-strip {
         height: auto;
     }
+    .register-strip.bottom { display: none; }
+    
+    .team-member { width: 50%; }
     
     .register-content form {
         left: 10%;
@@ -293,6 +392,8 @@ header .logo {
     .register-content form .checkboxes div {
         display: block;
     }
+    
+    .team h1 { text-align: center; }
 
     .countdown {
         font-size: 30px;
