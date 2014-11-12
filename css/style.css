@@ -90,7 +90,7 @@ header .logo {
     text-align: left;
     margin: 10px 0px;
 }
-.about p {
+.about p, .schedule p {
     line-height: 28px;
 }
 
