@@ -70,7 +70,20 @@ header .logo {
     height: 200px;
     position: relative;
     left: 50%;
-    margin-left: -400px;
+    margin-left: -408px;
+}
+
+header .video {
+    position: relative;
+    left: 50%;
+    margin-left: -320px;
+    width: 640px;
+    height: 320px;
+}
+
+.vjs-default-skin .vjs-big-play-button,
+.vjs-default-skin .vjs-big-play-button:hover {
+    box-shadow: none;
 }
 
 .content {
@@ -325,6 +338,22 @@ footer .copy .copy-left {
     header {
         min-height: 500px;
     }
+    header .logo {
+        width: 700px;
+        height: 172px;
+        margin-left: -350px;
+    }
+    header .video {
+        position: relative;
+        left: 50%;
+        margin-left: -240px;
+        width: 480px;
+        height: 240px;
+    }
+    header .video video {
+        width: 480px;
+        height: 240px;
+    }
     .about {
         width: 60%;
     } 
@@ -375,6 +404,18 @@ footer .copy .copy-left {
         position: relative;
         left: 50%;
         margin-left: -160px;
+    }
+    
+    header .video {
+        position: relative;
+        left: 50%;
+        margin-left: -150px;
+        width: 300px;
+        height: 150px;
+    }
+    header .video video {
+        width: 300px;
+        height: 150px;
     }
     
     .register-strip {

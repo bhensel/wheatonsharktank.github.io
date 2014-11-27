@@ -30,10 +30,12 @@ var countdown = function() {
 
 }
 
+/*
 // update the tag with id "countdown" every 1 second
 setInterval(countdown, 1000);
 
 countdown();
+*/
 
 
 $(document).ready(function() {

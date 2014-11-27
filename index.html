@@ -7,15 +7,25 @@
         <link rel="stylesheet" type="text/css" href="css/strip/strip.css"/>
         <script type="text/javascript" src="javascript/jquery.min.js"></script>
         <script type="text/javascript" src="javascript/moment.js"></script>
+        
+        <script type="text/javascript">
+            document.createElement('video');
+            document.createElement('audio');
+            document.createElement('track');
+        </script>
+        <link href="//vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
+        <script src="//vjs.zencdn.net/4.10/video.js"></script>
     </head>
     <body>
         <header class="t100">
             <div class="logo"></div>
-            <div class="countdown">
-                <span id="countdown"></span>
-                <span class="subtitle">until event.</span>
-                <span class="subtitle"><br></span>
-                <span class="subtitle">7:00pm 11/13/14</span>
+            <div class="video">
+                <video id="sharktank2014" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="https://s3.amazonaws.com/wcstatic/SharkTank2014.jpg" data-setup='{"example_option":true}'>
+                        
+                    <source src="https://s3.amazonaws.com/wcstatic/SharkTank2014.m4v" type='video/mp4' />
+                    <source src="https://s3.amazonaws.com/wcstatic/SharkTank2014.webm" type='video/webm' />
+                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                </video>
             </div>
         </header>
         <section class="content">
@@ -164,6 +174,23 @@
                 <div class="copy-right">Made With Love In Beamer</div>
             </div>
         </footer>
+        <script type="text/javascript">
+            // Once the video is ready
+            videojs("sharktank2014").ready(function() {
+                
+                var myPlayer = this;
+                var aspectRatio = 1/2;
+                
+                function resizeVideoJS() {
+                    var width = document.getElementById(myPlayer.L).parentElement.offsetWidth;
+                    myPlayer.width(width).height( width * aspectRatio );
+                }
+                
+                resizeVideoJS();
+                
+                window.onresize = resizeVideoJS;
+            });
+        </script>
         <script type="text/javascript" src="javascript/strip.min.js"></script>
         <script type="text/javascript" src="javascript/index.js"></script>
     </body>
