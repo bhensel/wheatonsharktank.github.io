@@ -46,6 +46,13 @@ h1, h2 {
     text-align: center;
 }
 
+h3 {
+  font-weight: 400;
+    color: #000;
+    font-size: 36px;
+    text-align: center;
+}
+
 
 
 .button {
