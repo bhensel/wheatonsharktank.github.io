@@ -211,6 +211,8 @@ header .video {
     margin: 0px;
     font-size: 15px;
     position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .vectors span {
     display: block;
