@@ -205,6 +205,23 @@ header .video {
     color: #FFF;    
 }
 
+.vectors {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    font-size: 15px;
+    position: relative;
+}
+.vectors span {
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+    color: #FFF;    
+}
+
 .winner-image {
     display: inline-block;
     vertical-align: middle;
